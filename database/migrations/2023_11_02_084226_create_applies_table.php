@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('applies', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('phone');
+            $table->text('address')->nullable();
+            $table->text('passport_front_image')->nullable();
+            $table->text('passport_back_image')->nullable();
+            $table->text('document')->nullable();
+            $table->text('cv')->nullable();
+            $table->string('country');
+            $table->string('university')->foreign('university')->references('name')->on('universities');
+            $table->string('course_name')->nullable();
+            $table->string('year')->nullable();
+            
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('applies');
+    }
+};

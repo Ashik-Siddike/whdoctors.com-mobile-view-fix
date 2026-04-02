@@ -1,0 +1,605 @@
+/* ============================================================
+   WHDoctors - Mobile Responsive Fixes
+   ONLY mobile view — desktop view is NEVER touched.
+   Breakpoint: max-width 991px
+   Audit Items Covered: P1-P14 from mobile_audit.md
+   ============================================================ */
+
+
+/* ===== P3 | Hamburger Button: always visible on mobile ===== */
+#wh-burger-btn-global {
+    display: none;
+    position: fixed !important;
+    top: 10px !important;
+    right: 12px !important;
+    z-index: 9999 !important;
+    background-color: #dc4d01 !important;
+    border-radius: 8px !important;
+    padding: 8px 10px !important;
+    cursor: pointer !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+@media only screen and (max-width: 991px) {
+    #wh-burger-btn-global {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* ===== P3 | Hide desktop navbar on mobile ===== */
+    .bottom-menu-new-root-class-name {
+        display: none !important;
+    }
+
+    /* ===== P1 | No horizontal scrollbar ===== */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+}
+
+
+/* ===== P4 | Swiper Arrow — small & unobtrusive on mobile ===== */
+@media only screen and (max-width: 991px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+        border-radius: 50% !important;
+        background: rgba(220, 77, 1, 0.85) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 14px !important;
+        color: #fff !important;
+        font-weight: bold !important;
+    }
+    .swiper-button-prev { left: 6px !important; }
+    .swiper-button-next { right: 6px !important; }
+}
+
+
+/* ===== P5 | University Card — no overflow on mobile ===== */
+@media only screen and (max-width: 991px) {
+    [class^="university-root-class-name"],
+    [class*=" university-root-class-name"] {
+        width: 90% !important;
+        max-width: 100% !important;
+        min-width: unset !important;
+        margin: 0 auto !important;
+    }
+}
+
+
+/* ===== P6 | Top Header — compact on mobile ===== */
+@media only screen and (max-width: 991px) {
+
+    /* Reduce total height of top header */
+    .home-header-container {
+        overflow: hidden !important;
+    }
+
+    .header-header {
+        padding: 8px 12px !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0 !important;
+    }
+
+    /* Hide the long address text on mobile — saves ~80px */
+    .header-address {
+        display: none !important;
+    }
+
+    /* Phone and email in one compact row */
+    .header-call-to-action {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .header-mobile,
+    .header-email {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+    }
+
+    .header-call,
+    .header-email1 {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+    }
+
+    .header-icon02,
+    .header-icon04 {
+        width: 18px !important;
+        height: 18px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Social bar compact */
+    .header-container1 {
+        width: 100% !important;
+    }
+    .header-container2 {
+        width: 100% !important;
+    }
+    .header-social-bar {
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 6px 0 !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .header-social-bar button {
+        background: none !important;
+        border: none !important;
+        padding: 2px !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+    }
+
+    .home-icon33 {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
+
+
+/* ===== P8 | Hero Slider — readable text on mobile ===== */
+@media only screen and (max-width: 767px) {
+
+    /* Slider height control */
+    .animeslide-slide,
+    .swiper-slide {
+        min-height: 200px !important;
+        max-height: 55vh !important;
+    }
+
+    /* Hero heading */
+    .animeslide-heading,
+    .swiper-slide h1,
+    .swiper-slide h2,
+    .swiper-slide .slide-title {
+        font-size: 18px !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+        padding: 0 40px !important;
+    }
+
+    /* Hero subtext */
+    .animeslide-heading span,
+    .swiper-slide h2,
+    .swiper-slide .slide-subtitle {
+        font-size: 13px !important;
+    }
+}
+
+
+/* ===== P10 | Google Translate Widget — compact on mobile ===== */
+@media only screen and (max-width: 991px) {
+    #google_translate_element {
+        font-size: 11px !important;
+        max-width: 130px !important;
+        overflow: hidden !important;
+    }
+    .goog-te-gadget {
+        font-size: 11px !important;
+        color: #fff !important;
+        white-space: nowrap !important;
+    }
+    .goog-te-combo {
+        font-size: 11px !important;
+        max-width: 120px !important;
+        background: transparent !important;
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,0.5) !important;
+        border-radius: 4px !important;
+        padding: 2px 4px !important;
+    }
+}
+
+
+/* ===== P12 | Hero Badge/Logo — not blocking content on mobile ===== */
+@media only screen and (max-width: 767px) {
+    /* The floating hexagonal badge in hero */
+    .animeslide-image1,
+    .animeslide-container1,
+    [class*="hexagon"],
+    [class*="badge"] {
+        width: 60px !important;
+        height: 60px !important;
+        bottom: 8px !important;
+        left: 8px !important;
+        opacity: 0.8 !important;
+    }
+}
+
+
+/* ===== P14 | Scroll-to-Top button — correct position on mobile ===== */
+@media only screen and (max-width: 991px) {
+    .slide-to-top-slide-to-top,
+    [class*="slide-to-top"],
+    .back-to-top,
+    #back-to-top {
+        bottom: 16px !important;
+        right: 16px !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        border-radius: 50% !important;
+        z-index: 900 !important;      /* below hamburger (9999) */
+    }
+}
+
+
+/* ===== P9 | Footer links — min 44px touch targets ===== */
+@media only screen and (max-width: 991px) {
+    .footer1-container8 span,
+    .footer1-container8 a,
+    footer a,
+    footer span {
+        display: inline-block !important;
+        padding: 8px 0 !important;
+        font-size: 13px !important;
+        line-height: 1.8 !important;
+        min-height: 44px !important;
+    }
+
+    /* Social icon buttons in footer */
+    footer button,
+    footer .social-btn,
+    .footer-social-btn {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+
+/* ===== General | All images responsive ===== */
+@media only screen and (max-width: 991px) {
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+/* ===== General | Component cards full width on small mobile ===== */
+@media only screen and (max-width: 767px) {
+    [class^="component1-root-class-name"],
+    [class*=" component1-root-class-name"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
+
+/* ============================================================ */
+/* NEW PROFESSIONAL MOBILE DESIGN FIXES */
+/* ============================================================ */
+
+@media only screen and (max-width: 991px) {
+    /* 1. Remove the old header burger menu entirely to avoid duplicates */
+    .navbar-burger {
+        display: none !important;
+    }
+
+    /* 2. Professional Hamburger Button (Modern, Glassmorphic feel) */
+    #wh-burger-btn-global {
+        display: flex !important;
+        background: rgba(220, 77, 1, 0.95) !important;
+        backdrop-filter: blur(8px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 12px !important; /* more rounded */
+        padding: 10px !important;
+        box-shadow: 0 4px 15px rgba(220, 77, 1, 0.4) !important;
+        top: 15px !important;
+        right: 15px !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    #wh-burger-btn-global svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    /* 3. Professional ABOUT / EMPLOYEE TABS (Grid of Pills) */
+    .home-tab-silector {
+        border: none !important;
+        padding: 15px !important;
+        background: transparent !important;
+        margin: 20px 10px !important;
+        border-radius: 16px !important;
+        box-shadow: inset 0 0 0 1px rgba(220, 77, 1, 0.1) !important;
+    }
+    
+    .home-sidebar {
+        background: transparent !important;
+        padding: 0 !important;
+    }
+    
+    .home-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        padding: 5px !important;
+        align-items: stretch !important;
+    }
+    
+    .home-nav .tab-link {
+        font-family: 'Inter', 'Segoe UI', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        background: #f8f9fa !important;
+        color: #DC4D01 !important;
+        padding: 12px 10px !important;
+        border-radius: 30px !important; /* Pill shape */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+        border: 1.5px solid rgba(220, 77, 1, 0.1) !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .home-nav .tab-link.active {
+        background: linear-gradient(135deg, #DC4D01, #f46c25) !important;
+        color: #ffffff !important;
+        border-color: transparent !important;
+        box-shadow: 0 6px 15px rgba(220, 77, 1, 0.3) !important;
+    }
+
+    /* Hide the problematic logo box in the tab section on mobile */
+    .home-company {
+        display: none !important;
+    }
+
+    /* 4. Fix overall padding issues for full-width components touching the edge */
+    .component1-root-class-name,
+    .component1-root-class-name1,
+    .component1-root-class-name2,
+    .component1-root-class-name3 {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Plan Your Best Education Section padding */
+    .silector-container,
+    .home-banner {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Why Choose Us Padding */
+    .home-features1 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* WHAT THEY'RE SAYING glitch fix */
+    .home-text35,
+    .testimonial-card1-testimonial-card h3 {
+        word-break: break-word !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 5. Fix giant Hexagon Logo in Mobile Menu by capping dimensions */
+    #wh-mobile-menu-global img {
+        max-width: 150px !important;
+        max-height: 50px !important;
+        object-fit: contain !important;
+    }
+    
+    /* Address missing padding on some elements */
+    .home-main {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+}
+
+
+/* ============================================================ */
+/* EXTRA POLISH FOR MOBILE ALIGNMENTS */
+/* ============================================================ */
+
+@media only screen and (max-width: 991px) {
+    /* "Located in 5 Countries" Yellow boxes margin/padding */
+    .home-container15, .home-container23, .home-container26 {
+        margin: 10px auto !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 90% !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Red-Yellow Gradient "Plan your best education" */
+    .silector-container,
+    [class*="silector-container"] {
+        margin: 0 auto !important;
+        width: 92% !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+    }
+
+    /* Footer tweaks */
+    footer, .footer1-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        text-align: center !important;
+    }
+
+    /* Testimonials Title Fix */
+    .testimonial-card1-testimonial-card .testimonial-card1-text {
+        font-family: 'Times New Roman', serif !important;
+        font-size: 16px !important;
+        letter-spacing: normal !important;
+    }
+
+    /* Top bar translate widget overlap fix */
+    .header-social-bar {
+        gap: 6px !important;
+    }
+    
+    #google_translate_element {
+        transform: scale(0.9) !important;
+        transform-origin: right center !important;
+    }
+
+    /* Make sure all body elements don't touch the immediate edge */
+    body {
+        padding-bottom: 20px !important;
+    }
+}
+
+
+/* ======================================= */
+/* FORCE GRID FOR ALL TABS (SERVICE POINT, CONTACTS) */
+/* ======================================= */
+@media only screen and (max-width: 991px) {
+    .home-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        padding: 5px !important;
+        align-items: stretch !important;
+    }
+    
+    .home-nav span,
+    .home-nav .tab-link,
+    .home-text01, .home-text02, .home-text03, .home-text04 {
+        font-family: 'Inter', 'Segoe UI', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        background: #f8f9fa !important;
+        color: #DC4D01 !important;
+        padding: 12px 10px !important;
+        border-radius: 30px !important; /* Pill shape */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+        border: 1.5px solid rgba(220, 77, 1, 0.1) !important;
+        letter-spacing: 0.5px !important;
+        margin: 0 !important; /* Reset any bad margins */
+        text-transform: uppercase !important; /* ensure match */
+    }
+    
+    .home-nav span.active,
+    .home-nav .tab-link.active,
+    .home-text01.active, .home-text02.active, .home-text03.active, .home-text04.active {
+        background: linear-gradient(135deg, #DC4D01, #f46c25) !important;
+        color: #ffffff !important;
+        border-color: transparent !important;
+        box-shadow: 0 6px 15px rgba(220, 77, 1, 0.3) !important;
+    }
+}
+
+
+/* ======================================= */
+/* FIX BUTTON GRID HEIGHT & CAROUSEL GAP */
+/* ======================================= */
+@media only screen and (max-width: 991px) {
+    /* 1. Reduce huge gap between Carousel and Tabs */
+    .home-tab-silector {
+        border: none !important; 
+        margin-top: 5px !important; /* Minimal gap from carousel */
+        margin-bottom: 20px !important;
+        padding: 10px 5px !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        background: transparent !important;
+    }
+
+    /* 2. Make sure Sidebar doesn't have a fixed height cutting off row 2 */
+    .home-sidebar {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    /* 3. Ensure the Grid Container fully expands to fit 2 rows */
+    .home-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: 12px !important;
+        padding: 5px 10px !important;
+        align-items: stretch !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        border: none !important;
+    }
+    
+    /* Ensure the Swiper/Carousel container doesn't have huge bottom margins */
+    .swiper, .mySwiper, .home-container .swiper {
+        margin-bottom: 5px !important;
+    }
+}
+
+
+/* ======================================= */
+/* FIX ROUND IMAGES (Testimonial Avatars) */
+/* ======================================= */
+@media only screen and (max-width: 991px) {
+    /* The global img { height: auto !important } breaks border-radius: 50%
+       by turning square aspect ratios into their intrinsic sizes. We must
+       re-enforce equal dimensions for avatar images to keep them round. */
+    
+    .testimonial-card1-image,
+    .testimonial-card1-image[class], /* High specificity */
+    img.testimonial-card1-image {
+        width: 80px !important;
+        height: 80px !important;   /* Force equal height to maintain circle */
+        min-width: 80px !important;
+        min-height: 80px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+    
+    /* Also ensure any other explicitly round elements maintain aspect ratio */
+    .employee-card img {
+        object-fit: cover !important;
+    }
+}
