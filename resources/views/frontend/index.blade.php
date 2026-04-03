@@ -616,15 +616,20 @@ Home Page
                 <br>
 
                 <style>
+                    /* Desktop & Global fixes to prevent squishing and oval images */
                     .employee-card {
                         transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease;
                         transform-style: preserve-3d;
                         cursor: pointer;
                         will-change: transform;
                         perspective: 1000px;
-                        background: #dc4d01 ;
+                        background: #dc4d01;
                         border-radius: 15px;
                         box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+                        min-width: 200px; /* Safe minimum width */
+                        max-width: 320px; /* Professional max width */
+                        margin: 0 auto;
+                        width: 100%;
                     }
 
                     /* Hover: subtle lift + 3D tilt */
@@ -635,9 +640,15 @@ Home Page
                     /* Image lift for depth */
                     .employee-card img {
                         transition: transform 0.4s cubic-bezier(.2,.9,.2,1), box-shadow 0.4s;
-                        transform: translateZ(20px);
+                        transform: translateZ(10px);
                         box-shadow: 0 6px 15px rgba(0,0,0,0.15);
                         border-radius: 50%;
+                        width: 110px !important;
+                        height: 110px !important;
+                        min-width: 110px !important;
+                        object-fit: cover !important;
+                        aspect-ratio: 1/1 !important;
+                        margin: 0 auto 15px auto !important;
                     }
 
                     /* floating idle animation */
@@ -649,25 +660,21 @@ Home Page
                     .employee-card.idle {
                         animation: floaty 6s ease-in-out infinite;
                     }
-
-
                 </style>
 
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="row justify-content-center align-items-stretch mt-3 mb-4" style="gap: 60px;">
                     @foreach ($employees as $employee)
-                        <div class="col">
-                            <div class="card h-100 text-center employee-card p-3">
+                        <div class="col-12 col-sm-8 col-md-5 col-lg-4 d-flex justify-content-center">
+                            <div class="card h-100 text-center employee-card p-4">
                                 <img src="{{ $employee->image ? asset($employee->image) : asset('images/avatar-3637561_1280.png') }}"
                                      class="card-img-top rounded-circle mx-auto"
-                                     alt="{{ $employee->name }}"
-                                     style="width: 110px; height: 110px; object-fit: cover;">
+                                     alt="{{ $employee->name }}">
 
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-family: 'Times New Roman', serif;">
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <h5 class="card-title" style="font-family: 'Times New Roman', serif; font-size: 18px; margin-bottom: 8px;">
                                         {{ $employee->name }}
                                     </h5>
-                                    <p class="card-text" style="font-family: 'Times New Roman', serif;">
+                                    <p class="card-text text-dark" style="font-family: 'Times New Roman', serif; font-size: 15px;">
                                         {{ $employee->designation }}
                                     </p>
                                 </div>

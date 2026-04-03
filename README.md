@@ -1,66 +1,36 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# WHDoctors Mobile View Fix Mission
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+এই মিশনে আমরা WHDoctors ওয়েবসাইটের মোবাইল রেসপন্সিভনেস এবং ইউজার ইন্টারফেস (UI) সংক্রান্ত বেশ কিছু ক্রিটিক্যাল সমস্যা সমাধান করেছি। ডেস্কটপ ভিউ ঠিক রেখে শুধুমাত্র মোবাইল ভিউয়ের জন্য ওভাররাইড করে ডিজাইন প্রফেশনাল করা হয়েছে। 
 
-## About Laravel
+নিচে আমরা যেই যেই ফাইলগুলোতে কাজ করেছি তার একটি বিস্তারিত তালিকা পাথ সহ দেওয়া হলো:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### ১. মূল লেআউট এবং ওভারঅল স্ট্রাকচার
+* **ফাইল পাথ:** `d:\whdoctors.com\resources\views\frontend\app.blade.php`
+* **পরিবর্তন:** মোবাইল ভিউয়ের জন্য গ্লোবাল হ্যামবার্গার মেনু (Hamburger Menu) অ্যাড করা হয়েছে। বডির এক্সট্রা প্যাডিং ফিক্স করা এবং `mobile-fixes.css` যুক্ত করা হয়েছে। এছাড়া একটি কাস্টম লোগো (সাদা হেক্সাগন ফিল্টার রিমুভ করে) মেনুতে যুক্ত করা হয়েছে।
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### ২. হেডার এবং নেভিগেশন (Header & Navbar)
+* **ফাইল পাথ:** `d:\whdoctors.com\resources\views\frontend\includes\header.blade.php`
+* **পরিবর্তন:** রেসপন্সিভ ব্রেকপয়েন্ট (991px) ঠিক করে মোবাইল মেনু এবং সাবমেনুর ড্রপডাউন ট্রানজিশন ঠিক করা হয়েছে।
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### ৩. টপ-হেডার অপ্টিমাইজেশন
+* **ফাইল পাথ:** `d:\whdoctors.com\resources\views\frontend\includes\top-header.blade.php`
+* **পরিবর্তন:** মোবাইল ভিউকে পরিচ্ছন্ন (compact) দেখানোর জন্য অপ্রয়োজনীয় address হাইড করে ফোন নম্বর এবং ইমেইল সুন্দর করে এলাইন করা হয়েছে।
 
-## Learning Laravel
+### ৪. মোবাইল সিএসএস ওভাররাইড (Custom Mobile Fixes CSS)
+* **ফাইল পাথ:** `d:\whdoctors.com\public\css\mobile-fixes.css`
+* **পরিবর্তন:** সমস্ত মোবাইল স্পেসিফিক ডিজাইন এই ফাইলে করা হয়েছে।
+  * ہিরো সেকশনের ব্যাজ পজিশন ফিক্স।
+  * "ABOUT", "EMPLOYEE TEAM", "SERVICE POINT", "CONTACTS" ট্যাবগুলোকে প্রফেশনাল 2x2 পিল-শেপড গ্রিডে (Grid) রূপান্তর।
+  * ক্যারোসেল বাটন পজিশন ফিক্স।
+  * টেস্টিমোনিয়াল সেকশনের ছবিগুলো যাতে ডিম্বাকৃতির (Egg/Oval shape) না হয়ে স্কয়ার শেপের মাধ্যমে পারফেক্ট গোল (Round shape) থাকে তার জন্য ফিক্স।
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ৫. অডিট রোডম্যাপ ডকুমেন্ট
+* **ফাইল পাথ:** `d:\whdoctors.com\mobile_audit.md`
+* **পরিবর্তন:** পুরো টাস্কের একটি অডিট চেকলিস্ট তৈরি করা হয়েছিল যা আমরা সফলভাবে কমপ্লিট করেছি।
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### ৬. গিট ইগনোর এবং গিটহাবে পুশ
+* **ফাইল পাথ:** `d:\whdoctors.com\.gitignore`
+* **পরিবর্তন:** `git push` এর সময় সাইজ ইস্যু (212MB) এড়ানোর জন্য .gitignore ফাইলে অপ্রয়োজনীয় জিপ (zip), টেম্প ফোল্ডার (`zi*`), বড় এসকিউএল (sql) ফাইল এবং লগ ফাইলগুলো (`storage/logs/*.log`) ইগনোর করে একটি নতুন ফ্রেশ কমিট তৈরি ও পুশ করা হয়েছে।
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+**মিশন স্ট্যাটাস:** সফলভাবে সম্পন্ন (Completed!) 🚀

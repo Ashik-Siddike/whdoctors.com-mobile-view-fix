@@ -598,8 +598,48 @@
         border-radius: 50% !important;
     }
     
-    /* Also ensure any other explicitly round elements maintain aspect ratio */
+    /* Also ensure explicitly round employee elements maintain aspect ratio */
     .employee-card img {
+        width: 80px !important;
+        height: 80px !important;
+        min-width: 80px !important;
+        min-height: 80px !important;
         object-fit: cover !important;
+        border-radius: 50% !important;
+        margin: 0 auto 10px auto !important;
+        transform: none !important; /* Remove 3D transform on mobile that might cause issues */
+    }
+
+    /* Force nice 2-column grid for employee cards on mobile */
+    #service-features .row.row-cols-1 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    #service-features .row > .col {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: unset !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .employee-card {
+        padding: 15px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .employee-card .card-title {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 5px !important;
+        word-wrap: break-word !important;
+    }
+
+    .employee-card .card-text {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0 !important;
     }
 }
