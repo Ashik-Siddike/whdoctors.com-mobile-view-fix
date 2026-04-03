@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>About-Us - {{ getContentData(83, 'title'); }}</title>
+    <title>About-Us - {{ getContentData(83, 'title') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
 
@@ -219,13 +219,13 @@
                     <span class="about-us-text06" style="font-family:Times New Roman;">About</span>
                     <br class="about-us-text07" />
                     <span class="about-us-text08" style="font-family:Times New Roman;">
-                      {{ getContentData(83, 'title'); }}
+                      {{ getContentData(83, 'title') }}
                     </span>
                     <br class="about-us-text09" />
                     <span></span>
                   </h1>
                 </div>
-                <h2 class="about-us-text11" style="font-family:Times New Roman;">{{ getContentData(83, 'subtitle'); }}</h2>
+                <h2 class="about-us-text11" style="font-family:Times New Roman;">{{ getContentData(83, 'subtitle') }}</h2>
                 <p class="about-us-text12" style="font-family:Times New Roman !important;">
                     {!! getContentData(83, 'description'); !!}
                 </p>
@@ -464,7 +464,7 @@
           </div>
           <div class="about-us-siteber">
             <h1 class="about-us-text56" style="font-family:Times New Roman;">
-              {{ getContentData(86, 'title'); }}</span></h1>
+              {{ getContentData(86, 'title') }}</span></h1>
               @foreach ($universities as $university)
                 <div class="feature-card1-feature-card feature-card1-root-class-name2" style="background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url({{ $university->image }});">
                     <a href="{{route('abroad.university', $university->country->name)}}" class="feature-card1-link">
@@ -495,15 +495,15 @@
 
 @extends('frontend.app')
 {{-- @section('seo_title')
-{{ getContentData(124, 'title'); }}
+{{ getContentData(124, 'title') }}
 @endsection
 
 @section('seo_description')
-{{ getContentData(124, 'description'); }}
+{{ getContentData(124, 'description') }}
 @endsection
 
 @section('seo_keywords')
-{{ getContentData(124, 'subtitle'); }}
+{{ getContentData(124, 'subtitle') }}
 @endsection
 
 @section('seo_image')

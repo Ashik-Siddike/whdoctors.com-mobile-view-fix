@@ -4,15 +4,15 @@
 Abroad Living Page
 @endsection
 @section('seo_title')
-{{ getContentData(146, 'title'); }}
+{{ getContentData(146, 'title') }}
 @endsection
 
 @section('seo_description')
-{{ getContentData(146, 'description'); }}
+{{ getContentData(146, 'description') }}
 @endsection
 
 @section('seo_keywords')
-{{ getContentData(146, 'subtitle'); }}
+{{ getContentData(146, 'subtitle') }}
 @endsection
 
 @section('seo_image')

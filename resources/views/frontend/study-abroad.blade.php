@@ -103,15 +103,15 @@
 
 @extends('frontend.app')
 {{-- @section('seo_title')
-{{ getContentData(126, 'title'); }}
+{{ getContentData(126, 'title') }}
 @endsection
 
 @section('seo_description')
-{{ getContentData(126, 'description'); }}
+{{ getContentData(126, 'description') }}
 @endsection
 
 @section('seo_keywords')
-{{ getContentData(126, 'subtitle'); }}
+{{ getContentData(126, 'subtitle') }}
 @endsection
 
 @section('seo_image')

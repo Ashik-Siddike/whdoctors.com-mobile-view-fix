@@ -5,15 +5,15 @@ Home Page
 @endsection
 
 {{-- @section('seo_title')
-{{ getContentData(123, 'title'); }} seo
+{{ getContentData(123, 'title') }} seo
 @endsection
 
 @section('seo_description')
-{{ getContentData(123, 'description'); }}
+{{ getContentData(123, 'description') }}
 @endsection
 
 @section('seo_keywords')
-{{ getContentData(123, 'subtitle'); }}
+{{ getContentData(123, 'subtitle') }}
 @endsection
 
 @section('seo_image')
@@ -608,10 +608,10 @@ Home Page
 
             <div id="service-features" class="home-features tab-block d-none" style="background-color: #DC4D01">
                 <h2 class="home-text06 Headline2" style="font-size: 25px !important;font-family:Times New Roman">
-                    {{ getContentData(107, 'title'); }}
+                    {{ getContentData(107, 'title') }}
                 </h2>
                 <span class="home-text07" style="font-size: 18px !important;font-family:Times New Roman">
-          {{ getContentData(107, 'subtitle'); }}
+          {{ getContentData(107, 'subtitle') }}
         </span>
                 <br>
 
@@ -755,10 +755,10 @@ Home Page
 
 
                 {{-- <h2 class="home-text06 Headline2" style="font-size: 25px !important; font-family:Times New Roman" >
-                  {{ getContentData(114, 'title'); }}
+                  {{ getContentData(114, 'title') }}
                 </h2>
                 <span class="home-text07" style="font-family:Times New Roman;color:#000">
-                  {{ getContentData(114, 'subtitle'); }}
+                  {{ getContentData(114, 'subtitle') }}
                 </span>
                 <br>
 
@@ -797,10 +797,10 @@ Home Page
 
 
                 {{-- <h2 class="home-text06 Headline2"  style="font-size: 25px !important;font-family:Times New Roman ;color:#000" >
-                  {{ getContentData(115, 'title'); }}
+                  {{ getContentData(115, 'title') }}
                 </h2>
                 <span class="home-text07" style="font-family:Times New Roman; color:#000 !important">
-                  {{ getContentData(115, 'subtitle'); }}
+                  {{ getContentData(115, 'subtitle') }}
                 </span>
                 <div class="home-container03">
                   <span class="home-text08">
@@ -820,7 +820,7 @@ Home Page
     <div class="home-testimonial-section" style="background-color:#dc4d01a8">
       <div class="home-testimonial" style="background-color: #dc4d01a8;">
         <h1 class="home-text22" style="font-family:Times New Roman ;color:#000 !important">
-          {{ getContentData(38, 'title'); }}
+          {{ getContentData(38, 'title') }}
           <br />
           <span></span>
         </h1>
@@ -872,10 +872,10 @@ Home Page
   <div class="home-feature2">
     <div class="home-container07">
       <h2 class="home-text27 Headline2" style="font-family:Times New Roman ;color:#000 !important">
-        {{ getContentData(42, 'title'); }}
+        {{ getContentData(42, 'title') }}
       </h2>
       <span class="home-text28 Lead1" style="font-family:Times New Roman ;color:#000 !important">
-        {{ getContentData(42, 'subtitle'); }}
+        {{ getContentData(42, 'subtitle') }}
       </span>
     </div>
   </div>
@@ -889,8 +889,8 @@ Home Page
     <div class="home-why-us">
       <div class="home-heading-tagline">
         <h3 class="home-text29" style="font-family:Times New Roman; color:#000 !important">
-          {{ getContentData(43, 'subtitle'); }}
-          {{ getContentData(43, 'title'); }}</h3>
+          {{ getContentData(43, 'subtitle') }}
+          {{ getContentData(43, 'title') }}</h3>
         <span class="home-text30" style="font-family:Times New Roman; color:#000 !important">
           {!! getContentData(43, 'description'); !!}
         </span>
@@ -903,7 +903,7 @@ Home Page
             ></path>
           </svg>
           <h2 class="home-text31" style="font-size: 20px !important; font-family:Times New Roman; color:#000 !important">
-            {{ getContentData(44, 'title'); }}
+            {{ getContentData(44, 'title') }}
           </h2>
         </div>
         <div class="home-feature-card1">
@@ -913,7 +913,7 @@ Home Page
             ></path>
           </svg>
           <h2 class="home-text32" style="font-size: 20px !important;font-family;cursive; color:#000 !important">
-            {{ getContentData(45, 'title'); }}</h2>
+            {{ getContentData(45, 'title') }}</h2>
         </div>
         <div class="home-feature-card2">
           <svg viewBox="0 0 1024 1024" class="home-icon18">
@@ -923,7 +923,7 @@ Home Page
           </svg>
           <h2 class="home-text33" style="font-size: 20px !important; font-family:Times New Roman;">
             <span style="color:#000 !important">
-              {{ getContentData(46, 'title'); }}</span>
+              {{ getContentData(46, 'title') }}</span>
             <br />
           </h2>
         </div>
@@ -934,7 +934,7 @@ Home Page
             ></path>
           </svg>
           <h2 class="home-text36" style="font-size: 20px !important; font-family:Times New Roman; color:#000 !important">
-            {{ getContentData(47, 'title'); }}</span>
+            {{ getContentData(47, 'title') }}</span>
           </h2>
         </div>
       </div>
@@ -945,7 +945,7 @@ Home Page
   <div class="home-university-section">
     <div class="home-heading-button">
       <h1 class="home-text40" style="font-family:Times New Roman;color:#000 !important">
-        {{ getContentData(48, 'title'); }}</span>
+        {{ getContentData(48, 'title') }}</span>
       </h1>
       <div class="home-container08" >
 
@@ -968,11 +968,11 @@ Home Page
         <div class="home-info-text">
           <h3 class="HeadingTwo">
             <span>
-              <span style="font-family:Times New Roman; color:#000 !important">{{ getContentData(128, 'title'); }}</span>
+              <span style="font-family:Times New Roman; color:#000 !important">{{ getContentData(128, 'title') }}</span>
             </span>
           </h3>
           <span class="home-text47" style="font-family:Times New Roman;color:#000 !important">
-            {{ getContentData(128, 'subtitle'); }}
+            {{ getContentData(128, 'subtitle') }}
           </span>
           <div class="home-contacts">
             <div class="home-container09">
@@ -1041,7 +1041,7 @@ Home Page
                 </a>
               </button>
             <button>
-             <a href="{{ getContentData(61, 'button_link'); }}" target="_blank">
+             <a href="{{ getContentData(61, 'button_link') }}" target="_blank">
              <svg width="30px" class="home-icon33" height="30px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#fff">
@@ -1143,7 +1143,7 @@ Home Page
 
   <div class="home-universities-partners">
     <div class="home-universities">
-      <h1 class="home-text61" style="font-family:Times New Roman;color:#000 !important">{{ getContentData(63, 'title'); }}</h1>
+      <h1 class="home-text61" style="font-family:Times New Roman;color:#000 !important">{{ getContentData(63, 'title') }}</h1>
       <div class="home-universities-list">
         <div class="swiper university" style="height: 180px">
             <div class="swiper-wrapper">
@@ -1198,7 +1198,7 @@ Home Page
   </svg>
   <div class="home-blog-section">
     <div class="home-blog">
-      <h1 class="home-text63" style="font-family:Times New Roman;color:#000 !important">{{ getContentData(76, 'title'); }}</h1>
+      <h1 class="home-text63" style="font-family:Times New Roman;color:#000 !important">{{ getContentData(76, 'title') }}</h1>
       <div class="home-blogs">
 
 

@@ -111,22 +111,22 @@
             <div class="home-stats" style="height: 100%;">
                 <div class="home-customers stat-card">
                     <img class="counter-image" src="{{ asset(getContentData(35, 'image')) }}" alt="" >
-                    <span class="home-text10">{{ getContentData(35, 'title'); }}</span>
-                    <span class="home-text11">{{ getContentData(35, 'subtitle'); }}</span>
+                    <span class="home-text10">{{ getContentData(35, 'title') }}</span>
+                    <span class="home-text11">{{ getContentData(35, 'subtitle') }}</span>
                     <h1 class="home-text12">{!! getContentData(35, 'description'); !!}</h1>
                 </div>
 
                 <div class="home-projects stat-card">
                     <img class="counter-image" src="{{ asset(getContentData(36, 'image')) }}" alt="" >
-                    <span class="home-text14">{{ getContentData(36, 'title'); }}</span>
-                    <span class="home-text15">{{ getContentData(36, 'subtitle'); }}</span>
+                    <span class="home-text14">{{ getContentData(36, 'title') }}</span>
+                    <span class="home-text15">{{ getContentData(36, 'subtitle') }}</span>
                     <h1 class="home-text16">{!! getContentData(36, 'description'); !!}</h1>
                 </div>
 
                 <div class="home-cities stat-card">
                     <img class="counter-image" src="{{ asset(getContentData(37, 'image')) }}" alt="" >
-                    <span class="home-text18">{{ getContentData(37, 'title'); }}</span>
-                    <span class="home-text19">{{ getContentData(37, 'subtitle'); }}</span>
+                    <span class="home-text18">{{ getContentData(37, 'title') }}</span>
+                    <span class="home-text19">{{ getContentData(37, 'subtitle') }}</span>
                     <h1 class="home-text20">{!! getContentData(37, 'description'); !!}</h1>
                 </div>
             </div>
@@ -183,6 +183,85 @@
                   card.style.transform = '';
                   setTimeout(()=> card.classList.add('idle'), 200);
               });
+          });
+
+          // Counter Animation Logic
+          window.addEventListener('load', function() {
+              const counterElements = document.querySelectorAll('.home-customers h1, .home-projects h1, .home-cities h1');
+
+              counterElements.forEach(el => {
+                  let textContent = el.innerText.trim();
+                  let numMatch = textContent.match(/\d+(,\d+)?/);
+                  
+                  if (numMatch) {
+                      let numStr = numMatch[0];
+                      let finalValue = parseInt(numStr.replace(/,/g, ''), 10);
+                      
+                      el.dataset.finalValue = finalValue;
+                      el.dataset.originalHtml = el.innerHTML;
+                      el.dataset.numStr = numStr;
+                      el.dataset.animated = "false";
+                      
+                      el.innerHTML = el.dataset.originalHtml.replace(numStr, '0');
+                  }
+              });
+
+              // Add a slight delay before creating observer so layout shifts are done
+              setTimeout(() => {
+                  const observerOptions = {
+                      root: null,
+                      rootMargin: '0px',
+                      threshold: 0.5 // Require 50% visibility to ensure it's truly scrolled into view
+                  };
+
+                  const observer = new IntersectionObserver((entries, observer) => {
+                      entries.forEach(entry => {
+                          if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                              const el = entry.target;
+                              if (el.dataset.animated === "false") {
+                                  el.dataset.animated = "true";
+                                  animateValue(el, 0, parseInt(el.dataset.finalValue), 2500); // 2.5 seconds animation
+                                  observer.unobserve(el);
+                              }
+                          }
+                      });
+                  }, observerOptions);
+
+                  counterElements.forEach(el => {
+                      if (el.dataset.finalValue) {
+                          observer.observe(el);
+                      }
+                  });
+              }, 500);
+
+              function animateValue(obj, start, end, duration) {
+                  let startTimestamp = null;
+                  const originalHtml = obj.dataset.originalHtml;
+                  const numStr = obj.dataset.numStr;
+                  
+                  const step = (timestamp) => {
+                      if (!startTimestamp) startTimestamp = timestamp;
+                      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                      
+                      // easeOutExpo for a very satisfying slow-down at the end
+                      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                      const currentVal = Math.floor(easeProgress * (end - start) + start);
+                      
+                      let displayVal = currentVal.toString();
+                      if (numStr.includes(',')) {
+                          displayVal = currentVal.toLocaleString();
+                      }
+                      
+                      obj.innerHTML = originalHtml.replace(numStr, displayVal);
+                      
+                      if (progress < 1) {
+                          window.requestAnimationFrame(step);
+                      } else {
+                          obj.innerHTML = originalHtml.replace(numStr, numStr); 
+                      }
+                  };
+                  window.requestAnimationFrame(step);
+              }
           });
       })();
   </script>

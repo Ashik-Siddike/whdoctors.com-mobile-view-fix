@@ -6,15 +6,15 @@ Service Page
 
 
 {{-- @section('seo_title')
-{{ getContentData(125, 'title'); }}
+{{ getContentData(125, 'title') }}
 @endsection
 
 @section('seo_description')
-{{ getContentData(125, 'description'); }}
+{{ getContentData(125, 'description') }}
 @endsection
 
 @section('seo_keywords')
-{{ getContentData(125, 'subtitle'); }}
+{{ getContentData(125, 'subtitle') }}
 @endsection
 
 @section('seo_image')

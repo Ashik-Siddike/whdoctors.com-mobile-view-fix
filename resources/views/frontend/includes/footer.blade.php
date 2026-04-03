@@ -80,7 +80,7 @@
             </a>
 
             <!-- YouTube -->
-            <a href="{{ getContentData(61, 'button_link'); }}" target="_blank" class="footer-social-btn" style="text-align-last: center;padding-top: 12px !important;">
+            <a href="{{ getContentData(61, 'button_link') }}" target="_blank" class="footer-social-btn" style="text-align-last: center;padding-top: 12px !important;">
                 <i class="fab fa-youtube fa-lg"></i>
             </a>
 
@@ -96,7 +96,7 @@
 
         <div class="footer1-container8">
             <span style="font-family:Times New Roman;">
-{{--                {{ getContentData(17, 'title'); }}--}}
+{{--                {{ getContentData(17, 'title') }}--}}
             &copy; {{ now()->year }} WH Doctor's Study Lab Ltd. All rights reserved
             </span><br>
             <span style="font-family:Times New Roman;">

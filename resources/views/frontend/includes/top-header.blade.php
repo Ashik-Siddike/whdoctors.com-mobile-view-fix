@@ -332,7 +332,7 @@
                   </a>
               </button>
 {{--            <button>--}}
-{{--            <a href="{{ getContentData(60, 'button_link'); }}"><svg xmlns="http://www.w3.org/2000/svg" class="home-icon33" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg>--}}
+{{--            <a href="{{ getContentData(60, 'button_link') }}"><svg xmlns="http://www.w3.org/2000/svg" class="home-icon33" viewBox="0 0 448 512"><path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg>--}}
 {{--              </a>--}}
 {{--            </button>--}}
             <button>
@@ -345,7 +345,7 @@
 
 
 {{--            <button>--}}
-{{--                <a href="{{ getContentData(61, 'button_link'); }}">--}}
+{{--                <a href="{{ getContentData(61, 'button_link') }}">--}}
 {{--                <svg width="30px" class="home-icon33" height="30px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">--}}
 {{--                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">--}}
 {{--                      <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#fff">--}}

@@ -9,9 +9,9 @@
 
     <!-- Meta data -->
     <meta name="author" content="WH Doctors" />
-    {{-- <meta name="title" content="{{ getContentData(127, 'title'); }}"/>
-    <meta name="description" content="{{ getContentData(127, 'description'); }}"/>
-    <meta name="keywords" content="{{ getContentData(127, 'subtitle'); }}">
+    {{-- <meta name="title" content="{{ getContentData(127, 'title') }}"/>
+    <meta name="description" content="{{ getContentData(127, 'description') }}"/>
+    <meta name="keywords" content="{{ getContentData(127, 'subtitle') }}">
     <link rel="image_src" href="{{ asset(getContentData(127, 'image')); }}"/> --}}
 
 <meta name="title" content="{{ trim(optional($seo)->seo_title) }}"/>

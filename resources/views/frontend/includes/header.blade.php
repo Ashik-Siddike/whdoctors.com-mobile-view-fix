@@ -351,7 +351,7 @@
     <div data-thq="thq-dropdown" class="bottom-menu-new-thq-dropdown list-item" style="list-style: none">
         <div data-thq="thq-dropdown-toggle" class="bottom-menu-new-dropdown-toggle">
           <a href="#" class="bottom-menu-new-navlink02" style="font-family:Times New Roman;">
-            {{ getContentData(25, 'title'); }}
+            {{ getContentData(25, 'title') }}
           </a>
           <div data-thq="thq-dropdown-arrow" class="bottom-menu-new-dropdown-arrow">
             <svg viewBox="0 0 1024 1024" class="bottom-menu-new-icon">
@@ -376,7 +376,7 @@
     <div data-thq="thq-dropdown" class="bottom-menu-new-thq-dropdown list-item" style="list-style: none">
         <div data-thq="thq-dropdown-toggle" class="bottom-menu-new-dropdown-toggle">
           <a href="#" class="bottom-menu-new-navlink02" style="font-family:Times New Roman;">
-            {{ getContentData(26, 'title'); }}
+            {{ getContentData(26, 'title') }}
           </a>
           <div data-thq="thq-dropdown-arrow" class="bottom-menu-new-dropdown-arrow">
             <svg viewBox="0 0 1024 1024" class="bottom-menu-new-icon">
